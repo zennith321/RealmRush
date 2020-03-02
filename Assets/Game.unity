@@ -278,6 +278,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 43909087}
+  - component: {fileID: 43909088}
   m_Layer: 0
   m_Name: Enemies
   m_TagString: Untagged
@@ -300,6 +301,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &43909088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43909086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a89992ffe0607469016dd53c6013ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTimer: 1
+  Enemy: {fileID: 1762529549064862966, guid: b19d617391a686d499a68c3f2379244a, type: 3}
+  parent: {fileID: 43909087}
 --- !u!1001 &71059647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3037,7 +3053,7 @@ PrefabInstance:
     - target: {fileID: 5513477349144777125, guid: 0bbe66ef4388f964ca0195767a3ebd86,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 5513477349144777125, guid: 0bbe66ef4388f964ca0195767a3ebd86,
         type: 3}
@@ -3047,7 +3063,7 @@ PrefabInstance:
     - target: {fileID: 5513477349144777125, guid: 0bbe66ef4388f964ca0195767a3ebd86,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5513477349144777125, guid: 0bbe66ef4388f964ca0195767a3ebd86,
         type: 3}
@@ -5919,10 +5935,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 43909087}
     m_Modifications:
-    - target: {fileID: 888548007, guid: 0dc657ece5d6f514297eb54082bc243b, type: 3}
-      propertyPath: hitPoints
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 1670769832628526, guid: 0dc657ece5d6f514297eb54082bc243b, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -5970,14 +5982,6 @@ PrefabInstance:
     - target: {fileID: 4186752768196848, guid: 0dc657ece5d6f514297eb54082bc243b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4186752768196848, guid: 0dc657ece5d6f514297eb54082bc243b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.30000013
-      objectReference: {fileID: 0}
-    - target: {fileID: 4186752768196848, guid: 0dc657ece5d6f514297eb54082bc243b, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.30000013
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dc657ece5d6f514297eb54082bc243b, type: 3}
@@ -6048,11 +6052,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5513477349144777126, guid: 0bbe66ef4388f964ca0195767a3ebd86,
-        type: 3}
-      propertyPath: targetEnemy
-      value: 
-      objectReference: {fileID: 888548004}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bbe66ef4388f964ca0195767a3ebd86, type: 3}
 --- !u!1001 &6269253508161880063

@@ -76,9 +76,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 10
-  parent: {fileID: 4907987154143992}
   hitParticlePrefab: {fileID: 2752329061723485}
   deathParticlePrefab: {fileID: 198537984209914932, guid: 1a51bfda454239a41afb7dee687c6ac0,
+    type: 3}
+  VFXParent: {fileID: 3048053155795367756, guid: 21a57c760dd66424ab3323fd04e61758,
     type: 3}
 --- !u!1 &1646541640735296
 GameObject:

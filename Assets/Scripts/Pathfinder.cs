@@ -62,7 +62,6 @@ public class Pathfinder : MonoBehaviour
         while(queue.Count > 0 && isRunning)
         {
             searchCenter = queue.Dequeue();
-            //print("Searching from: " + searchCenter); //TODO remove log
             HaltIfEndFound();
             ExploreNeighbours();
             searchCenter.isExplored = true;
@@ -73,7 +72,6 @@ public class Pathfinder : MonoBehaviour
     {
         if(searchCenter == endWaypoint)
         {
-            //print("Searching from end node, therefore stopping"); //TODO remove log
             isRunning = false;
         }
     }
@@ -102,7 +100,6 @@ public class Pathfinder : MonoBehaviour
         {
             queue.Enqueue(neighbour);
             neighbour.exploredFrom = searchCenter;
-            //print("Queueing " + neighbour);
         }
     }
 
@@ -126,9 +123,7 @@ public class Pathfinder : MonoBehaviour
             else
             {
                 grid.Add(gridPos, waypoint);
-                //waypoint.SetTopColor(Color.gray);
             }
         }
-        //print("Loaded " + grid.Count + " blocks");
     }
 }

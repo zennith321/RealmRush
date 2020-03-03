@@ -6,9 +6,9 @@ using UnityEngine;
 public class EnemyCollisionHandler : MonoBehaviour
 {
     [SerializeField] int hitPoints = 10;
-    [SerializeField] GameObject hitFX = null;
-    [SerializeField] Transform parent;
     [SerializeField] ParticleSystem hitParticlePrefab;
+    [SerializeField] ParticleSystem deathParticlePrefab;
+    ParticleSystem vfx = null;
 
     void Start()
     {
@@ -33,11 +33,14 @@ public class EnemyCollisionHandler : MonoBehaviour
     private void ProcessHit()
     {
         hitPoints--;
-        //Instantiate(hitFX, transform.position, Quaternion.identity, parent); TODO fix bug
+        hitParticlePrefab.Play();
     }
 
     private void KillEnemy()
     {
+        vfx = Instantiate(deathParticlePrefab, transform.position, Quaternion.identity);
+        vfx.Play();
+        Destroy(vfx.gameObject, 1f);
         Destroy(gameObject);
     }
 }

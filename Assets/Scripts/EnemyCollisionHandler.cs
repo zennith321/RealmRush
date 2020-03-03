@@ -8,6 +8,7 @@ public class EnemyCollisionHandler : MonoBehaviour
     [SerializeField] int hitPoints = 10;
     [SerializeField] GameObject hitFX = null;
     [SerializeField] Transform parent;
+    [SerializeField] ParticleSystem hitParticlePrefab;
 
     void Start()
     {

@@ -6,6 +6,7 @@ public class Waypoint : MonoBehaviour
 {
     public bool isExplored = false;
     public Waypoint exploredFrom;
+    public bool isPlaceable = true;
 
     Vector2Int gridPos;
     const int gridSize = 10;
@@ -27,5 +28,16 @@ public class Waypoint : MonoBehaviour
     {
         MeshRenderer topMeshRenderer = transform.Find("Top").GetComponent<MeshRenderer>();
         topMeshRenderer.material.color = color;
+    }
+
+    void OnMouseOver()
+    {
+        if (Input.GetMouseButtonUp(0))
+        {
+            if (isPlaceable)
+            {
+                print("Mouse is over " + gameObject);
+            }
+        }   
     }
 }

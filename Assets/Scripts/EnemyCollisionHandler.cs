@@ -32,7 +32,7 @@ public class EnemyCollisionHandler : MonoBehaviour
     private void ProcessHit()
     {
         hitPoints--;
-        Instantiate(hitFX, transform.position, Quaternion.identity, parent);
+        //Instantiate(hitFX, transform.position, Quaternion.identity, parent); TODO fix bug
     }
 
     private void KillEnemy()

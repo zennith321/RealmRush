@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1762529549064862969}
   - component: {fileID: 1762529549064862966}
   m_Layer: 0
-  m_Name: Enemy 1
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d3f292cb87a2b42b92ce8050b73dc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 50
+  hitPoints: 25
   hitFX: {fileID: 8199541604033405248, guid: 7f4a53c96feae1543ba52be7c709e2f9, type: 3}
   parent: {fileID: 1764035140710241966}
 --- !u!114 &1762529549064862966

@@ -6,9 +6,11 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     // TODO make movement smooth
-    [SerializeField] ParticleSystem finishParticlePrefab;
+    [SerializeField] ParticleSystem finishParticlePrefab = null;
     ParticleSystem vfx = null;
     [SerializeField] float movementPeriod = 0.5f;
+
+    PlayerHealth playerHealth;
 
     void Start()
     {
@@ -34,5 +36,8 @@ public class EnemyMovement : MonoBehaviour
         vfx.Play();
         Destroy(vfx.gameObject, vfx.main.duration);
         Destroy(gameObject);
+
+        playerHealth = FindObjectOfType<PlayerHealth>();
+        playerHealth.PlayerHit();
     }
 }

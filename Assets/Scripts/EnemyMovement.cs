@@ -5,7 +5,11 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // TODO make movement smooth
+    [SerializeField] ParticleSystem finishParticlePrefab;
+    ParticleSystem vfx = null;
+    [SerializeField] float movementPeriod = 0.5f;
+
     void Start()
     {
         Pathfinder pathfinder = FindObjectOfType<Pathfinder>();
@@ -15,12 +19,20 @@ public class EnemyMovement : MonoBehaviour
 
     IEnumerator FollowPath(List<Waypoint> path)
     {
-        //print("Starting Patrol...");
-        foreach(Waypoint waypoint in path)
+        foreach (Waypoint waypoint in path)
         {
             transform.position = waypoint.transform.position;
-            yield return new WaitForSeconds(1f);
-        }    
-        //print("Ending patrol");
+            yield return new WaitForSeconds(movementPeriod);
+        }
+        SelfDestruct(); // at the end of path
+    }
+
+    private void SelfDestruct()
+    {
+        var parentObject = GameObject.FindGameObjectsWithTag("Parent");
+        vfx = Instantiate(finishParticlePrefab, transform.position, Quaternion.identity, parentObject[0].transform);
+        vfx.Play();
+        Destroy(vfx.gameObject, vfx.main.duration);
+        Destroy(gameObject);
     }
 }

@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2674176877092623530
 Transform:
   m_ObjectHideFlags: 0
@@ -155,10 +155,6 @@ MonoBehaviour:
   isExplored: 0
   exploredFrom: {fileID: 0}
   isPlaceable: 1
-  towerPrefab: {fileID: 5513477349144777126, guid: 0bbe66ef4388f964ca0195767a3ebd86,
-    type: 3}
-  towersParent: {fileID: 8426850130048664028, guid: 1844afeef0d4b7c61957e16f155b5562,
-    type: 3}
 --- !u!65 &8126672454828749382
 BoxCollider:
   m_ObjectHideFlags: 0

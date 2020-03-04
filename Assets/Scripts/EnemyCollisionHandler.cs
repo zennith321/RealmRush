@@ -38,13 +38,11 @@ public class EnemyCollisionHandler : MonoBehaviour
 
     private void KillEnemy()
     {
-        vfx = Instantiate(deathParticlePrefab, transform.position, Quaternion.identity);
-        vfx.Play();
         var parentObject = GameObject.FindGameObjectsWithTag("Parent");
-        vfx.transform.parent = parentObject[0].transform;
-        float destroyDelay = vfx.main.duration;
-
-        Destroy(vfx.gameObject, destroyDelay);
+        vfx = Instantiate(deathParticlePrefab, transform.position, Quaternion.identity, parentObject[0].transform);
+        vfx.Play();
+        
+        Destroy(vfx.gameObject, vfx.main.duration);
         Destroy(gameObject);
     }
 }

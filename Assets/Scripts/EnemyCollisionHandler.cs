@@ -40,7 +40,11 @@ public class EnemyCollisionHandler : MonoBehaviour
     {
         vfx = Instantiate(deathParticlePrefab, transform.position, Quaternion.identity);
         vfx.Play();
-        Destroy(vfx.gameObject, 1f);
+        var parentObject = GameObject.FindGameObjectsWithTag("Parent");
+        vfx.transform.parent = parentObject[0].transform;
+        float destroyDelay = vfx.main.duration;
+
+        Destroy(vfx.gameObject, destroyDelay);
         Destroy(gameObject);
     }
 }

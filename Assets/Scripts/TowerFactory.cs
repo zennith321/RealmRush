@@ -8,7 +8,6 @@ public class TowerFactory : MonoBehaviour
     [SerializeField] Tower towerPrefab;
     [SerializeField] Transform towersParent;
 
-
     Queue<Tower> towerQueue = new Queue<Tower>();
 
     public void AddTower(Waypoint baseWaypoint)

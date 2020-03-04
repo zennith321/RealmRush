@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1289942997295908}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 41.334423, y: 0, z: -12.963612}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -79,8 +79,7 @@ MonoBehaviour:
   hitParticlePrefab: {fileID: 2752329061723485}
   deathParticlePrefab: {fileID: 198537984209914932, guid: 1a51bfda454239a41afb7dee687c6ac0,
     type: 3}
-  VFXParent: {fileID: 3048053155795367756, guid: 21a57c760dd66424ab3323fd04e61758,
-    type: 3}
+  VFXParent: {fileID: 0}
 --- !u!1 &1646541640735296
 GameObject:
   m_ObjectHideFlags: 0
